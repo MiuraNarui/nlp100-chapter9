@@ -3,11 +3,10 @@ import torch.nn.functional as F
 from itertools import combinations
 from transformers import AutoTokenizer, AutoModel
 
-# ModernBERT-baseを読み込む
-model_name = "answerdotai/ModernBERT-base"
+# BERTモデルを読み込む
+model_name = "bert-base-uncased"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
-model = AutoModel.from_pretrained(model_name)
-model.eval()
+model = AutoModel.from_pretrained(model_name).eval()
 
 # 類似度を求める4つの文
 sentences = [

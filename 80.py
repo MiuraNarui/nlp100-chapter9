@@ -1,7 +1,8 @@
 from transformers import AutoTokenizer
 
-# ModernBERT-base のトークナイザを読み込む
-tokenizer = AutoTokenizer.from_pretrained("answerdotai/ModernBERT-base")
+# BERTモデルのトークナイザを読み込む
+model_name = "bert-base-uncased"
+tokenizer = AutoTokenizer.from_pretrained(model_name)
 
 # トークン化する文
 text = "The movie was full of incomprehensibilities."

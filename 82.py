@@ -1,11 +1,10 @@
 import torch
 from transformers import AutoTokenizer, AutoModelForMaskedLM
 
-# ModernBERT-base を読み込む
-model_name = "answerdotai/ModernBERT-base"
+# BERTモデルを読み込む
+model_name = "bert-base-uncased"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
-model = AutoModelForMaskedLM.from_pretrained(model_name)
-model.eval()
+model = AutoModelForMaskedLM.from_pretrained(model_name).eval()
 
 # [MASK] を含む文
 text = "The movie was full of [MASK]."

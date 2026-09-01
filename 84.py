@@ -3,8 +3,8 @@ import torch
 import torch.nn.functional as F
 from transformers import AutoTokenizer, AutoModel
 
-# ModernBERT-baseを読み込む
-model_name = "answerdotai/ModernBERT-base"
+# BERTモデルを読み込む
+model_name = "bert-base-uncased"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModel.from_pretrained(model_name).eval()
 
