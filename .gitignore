@@ -216,3 +216,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# SST-2 dataset
+SST-2.zip
+SST-2/
