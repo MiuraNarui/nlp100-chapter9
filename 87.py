@@ -77,6 +77,12 @@ trainer = Trainer(
 # ファインチューニング
 trainer.train()
 
-# 検証データで評価
+# ファインチューニング済みモデルとトークナイザを保存
+trainer.save_model("fine_tuned_model")
+tokenizer.save_pretrained("fine_tuned_model")
+
+# 検証データで正解率を計測
 result = trainer.evaluate()
+
+print("検証データの正解率:", result["eval_accuracy"])
 print(result)
