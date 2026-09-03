@@ -1,0 +1,27 @@
+[project]
+name = "nlp100-chapter9"
+version = "0.1.0"
+description = "NLP 100 Exercises - Chapter 9"
+readme = "README.md"
+requires-python = ">=3.10"
+
+dependencies = [
+    "accelerate",
+    "datasets",
+    "evaluate",
+    "numpy",
+    "scikit-learn",
+    "torch",
+    "transformers",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu128" }
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true

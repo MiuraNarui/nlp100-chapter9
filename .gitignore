@@ -220,3 +220,17 @@ __marimo__/
 # SST-2 dataset
 SST-2.zip
 SST-2/
+
+# NLP / Hugging Face training outputs
+out/
+out_89/
+fine_tuned_model/
+checkpoints/
+
+# Model weights
+*.safetensors
+pytorch_model.bin
+
+# Training logs
+wandb/
+runs/
